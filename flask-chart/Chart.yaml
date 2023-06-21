@@ -1,0 +1,9 @@
+apiVersion: v2
+name: python-flask-chart
+description: My First Helm Chart, Python app that prints HTML files from ConfigMap, can regulate content by Helm values
+type: application
+version: 0.0.1
+appVersion: "1.0.0"
+maintainers:
+  - email: contact@devopscube.com
+    name: devopscube

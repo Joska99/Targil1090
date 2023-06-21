@@ -1,0 +1,50 @@
+replicaCount: 2
+
+image:
+  repository: joska99/flask-app:0.0.1
+
+service:
+  type: LoadBalancer
+  port: 8080
+  targetPort: 5000
+
+index_html: |
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <style>
+  body {
+  background-color: #152433;
+  }
+  h1 {
+  color: #eee322;
+  margin-left: 20px; 
+  }
+  </style>
+  </head>
+  <body>
+  <h1>
+  hello world from index-html!!!
+  </h1>
+  </body>
+  </html>
+home_html: |
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <style>
+  body {
+  background-color: #152433;
+  }
+  h1 {
+  color: #eee322;
+  margin-left: 20px; 
+  }
+  </style>
+  </head>
+  <body>
+  <h1>
+  hello world from home!!!
+  </h1>
+  </body>
+  </html>

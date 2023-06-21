@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-flask-html-config
+data:
+  index.html: "{{ .Values.index_html }}"
+  home.html: "{{ .Values.home_html }}"
