@@ -1,5 +1,7 @@
 <h1>Docker container with Python Flask app </h1>
 
+<img src="https://github.com/Joska99/Targil1090/blob/master/helm-flask-html.drawio">
+
 - Python flask takes HTML from "templates" directory
 - With CI pipeline to Build and Push Docker image to DockerHub
 
