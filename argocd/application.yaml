@@ -1,21 +1,15 @@
-# Apply Application Pod for argo cd to "app" NameSpace to deploy
+# # Apply Application Pod for argo cd to "argocd" NameSpace to deploy to "app"
 
 apiVersion: argoproj.io/v1alpha1
-kind: ApplicationSet
+kind: Application
 metadata:
-  name: argo-application
+  name: "argo-application"
 spec:
-  generators:
-    - clusters: {}
-  template:
-    metadata:
-      name: argo-application
-    spec:
-      project: "default"
-      source:
-        repoURL: https://github.com/Joska99/Targil1090.git
-        targetRevision: HEAD
-        path: kubernetes
-      destination:
-        server: https://kubernetes.default.svc
-        namespace: app
+  destination:
+    namespace: app
+    server: "https://kubernetes.default.svc"
+  source:
+    path: "kubernetes"
+    repoURL: "https://github.com/Joska99/Targil1090.git"
+    targetRevision: HEAD
+  project: "default"

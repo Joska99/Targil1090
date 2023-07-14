@@ -6,7 +6,6 @@ on:
       - master # Replace with your desired branch
     paths: # Trigers only by changes in those files/directories
       - "app/**"
-      - "kubernetes/**"
       - "Dockerfile"
 
 jobs:
