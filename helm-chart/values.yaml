@@ -1,11 +1,11 @@
 replicaCount: 2
 
 image:
-  repository: joska99/flask-app:0.0.1
+  repository: joska99/flask-app:latest
 
 service:
   type: LoadBalancer
-  port: 8080
+  port: 8000
   targetPort: 5000
 
 index_html: |
@@ -24,7 +24,7 @@ index_html: |
   </head>
   <body>
   <h1>
-  hello world from index-html!!!
+  hello world from index-html, helm!!!
   </h1>
   </body>
   </html>
@@ -44,7 +44,7 @@ home_html: |
   </head>
   <body>
   <h1>
-  hello world from home!!!
+  hello world from home, helm!!!
   </h1>
   </body>
   </html>
