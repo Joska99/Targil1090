@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: flask-html-config
+data:
+  index_html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    body {
+    background-color: #152433;
+    }
+    h1 {
+    color: #eee322;
+    margin-left: 20px; 
+    }
+    </style>
+    </head>
+    <body>
+    <h1>
+    hello world from index-html!!!
+    </h1>
+    </body>
+    </html>
+  home_html: |
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    body {
+    background-color: #152433;
+    }
+    h1 {
+    color: #eee322;
+    margin-left: 20px; 
+    }
+    </style>
+    </head>
+    <body>
+    <h1>
+    hello world from home!!!
+    </h1>
+    </body>
+    </html>

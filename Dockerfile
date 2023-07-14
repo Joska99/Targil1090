@@ -7,7 +7,7 @@ RUN pip3 install flask
 WORKDIR /app
 
 # Copy the Flask app code
-COPY . .
+COPY /app .
 
 # Run the Flask app
 CMD [ "python3","-m", "flask", "run", "--host=0.0.0.0" ] 
