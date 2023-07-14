@@ -61,6 +61,29 @@ helm delete flask-app
 . ./argocd/scripts.sh
 ```
 
+- Connect to ArgoCD GUI
+```bash
+kubectl get svc -n argocd
+```
+
+> argocd-service is IP for UI accessible on port 80/443/TCP
+```bash
+kubectl port-forward -n argocd svc/argocd-server 8080:443
+```
+
+>User Name is Admin
+<br/>
+
+>Get password
+```bash
+kubectl get secret argocd-initial-admin-secret -n argocd -o yaml
+```
+
+>Copy encrypted password and paste to ths command
+```bash
+echo <YOUR_PSWD> | base64 --decode 
+```
+
 - Get Application for ArgoCD
 ```bash
 kubectl get applicationset -n app
