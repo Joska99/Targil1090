@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: flask-html-config
 data:
-  index_html: |
+  index.html: |
     <!DOCTYPE html>
     <html>
     <head>
@@ -19,11 +19,11 @@ data:
     </head>
     <body>
     <h1>
-    hello world from index-html!!!
+    hello world from index-html in k8s!!!
     </h1>
     </body>
     </html>
-  home_html: |
+  home.html: |
     <!DOCTYPE html>
     <html>
     <head>
@@ -39,7 +39,7 @@ data:
     </head>
     <body>
     <h1>
-    hello world from home!!!
+    hello world from home in k8s!!!
     </h1>
     </body>
     </html>
