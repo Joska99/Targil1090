@@ -4,6 +4,8 @@
 - In 'app' directory Python flask 'app.py' takes HTML files from "templates" directory
 - With CI pipeline to Build and Push Docker image to DockerHub
 [![CI - Build and Push Docker Image to joska99/flask-app](https://github.com/Joska99/Targil1090/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/Joska99/Targil1090/actions/workflows/docker-publish.yml)
+- With Helm chart
+- With CD delivery by ArgoCD
 
 
 <h2>To run docker container</h2>
@@ -31,14 +33,9 @@ docker push joska99/flask-app:latest
 ```bash
 helm create "helm-chart"
 ```
-> Chart.yaml - Metadata for chart 
-<br />
-
-> values.yaml - Define values for chart
-<br />
-
+> Chart.yaml - Metadata for chart <br />
+> values.yaml - Define values for chart<br />
 > templates/ - Contains templates files for Kubernetes resources
-<br />
 
 - Create Helm package
 ```bash
@@ -62,15 +59,11 @@ helm delete flask-app
 ```
 
 - Connect to ArgoCD GUI
-
 >argocd-service is IP for GUI accessible on port 80/443/TCP
 ```bash
 kubectl port-forward -n argocd svc/argocd-server 8080:443
 ```
-
->User Name is Admin
-<br/>
-
+>User Name is Admin <br/>
 >Get password
 ```bash
 kubectl get secret argocd-initial-admin-secret -n argocd -o yaml | grep password: | awk '{print $2}' | base64 --decode
